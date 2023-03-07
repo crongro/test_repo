@@ -2,7 +2,7 @@ name: "PR Merge on time v3"
 
 on:
   schedule:
-  - cron: '0,10 12 * * 0,3,5,6'
+  - cron: '0,10 1 * * *'
 
   workflow_dispatch:
 
@@ -38,11 +38,11 @@ jobs:
                           name
                         }
                       }
-                     reviews(last: 1) {
+                      reviews(last: 1) {
                         nodes {
                           state
                         }
-                     }
+                      }
                     }
                   }
                 }
